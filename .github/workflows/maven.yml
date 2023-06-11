@@ -20,9 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: logikal-io/install-chrome@v1
-      with: 
-        version: 114.0.5735.106	
+    - uses: browser-actions/setup-chrome@v1
+    - run: chrome --version
         
     - uses: actions/checkout@v3
     - name: Set up JDK 11
