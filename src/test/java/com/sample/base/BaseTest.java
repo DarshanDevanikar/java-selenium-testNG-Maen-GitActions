@@ -30,7 +30,7 @@ public class BaseTest {
 		properties = new Properties();
 		try {
 			properties
-					.load(new BufferedReader(new FileReader("C://Users//test//eclipse-workspace//com.sample//src//test//resources//data//init.parameters")));
+					.load(new BufferedReader(new FileReader("src//test//resources//data//init.parameters")));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
