@@ -11,7 +11,7 @@ public class logintests extends BaseTest {
 	 * @author {darshandevanikar}
 	 */
 	@Test
-	public void TC001_login() {
+	public void TC0001_login() {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login();
 	}
