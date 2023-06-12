@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: On Pull Pequest Action
 
 on:
   push:
@@ -28,6 +28,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    
+    
+    - uses: sonarsource/sonarqube-scan-action@master
     
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
