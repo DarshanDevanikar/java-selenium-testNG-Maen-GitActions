@@ -29,7 +29,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     
-    - uses: browser-actions/setup-chrome@114
+    - uses: browser-actions/setup-chrome@v1
     - run: chrome --version
     
     - name: Build with Maven
