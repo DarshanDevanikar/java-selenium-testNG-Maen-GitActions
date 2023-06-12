@@ -52,7 +52,7 @@ public class BaseTest {
 		loadProperties();
 		switch (browser) {
 		case "chrome":
-			WebDriverManager.chromedriver().version("113.0.5672.126").setup();
+			WebDriverManager.chromedriver().browserVersion("113.0.5672.126").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
