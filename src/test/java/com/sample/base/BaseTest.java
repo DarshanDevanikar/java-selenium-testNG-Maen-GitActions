@@ -53,8 +53,11 @@ public class BaseTest {
 		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions opt = new ChromeOptions();
-			driver = new ChromeDriver(opt);
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--headless");
+			driver = new ChromeDriver(options);
 			break;
 
 		default:
