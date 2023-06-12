@@ -1,5 +1,6 @@
 package ui.login;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.sample.base.BaseTest;
 import com.sample.pom.LoginPage;
@@ -13,7 +14,7 @@ public class logintests extends BaseTest {
 	@Test
 	public void TC0001_login() {
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login();
+		Assert.assertTrue(loginPage.login(),"login successful..."); 
 	}
 
 }
