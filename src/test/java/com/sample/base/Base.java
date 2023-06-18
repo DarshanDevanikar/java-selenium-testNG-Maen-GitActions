@@ -14,10 +14,10 @@ import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public class Base {
 	protected WebDriver driver;
-	private Properties properties;
-	private String browser;
+	protected Properties properties;
+	public String browser;
 
 	
 	/**
@@ -26,7 +26,7 @@ public class BaseTest {
 	 * 
 	 * @author {darshandevanikar}
 	 */
-	public Properties loadProperties() {
+	public void loadProperties() {
 		properties = new Properties();
 		try {
 			properties
@@ -40,7 +40,6 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 		browser = properties.getProperty("browser");
-		return properties;
 		
 	}
 /**
@@ -50,13 +49,14 @@ public class BaseTest {
 	@BeforeTest
 	public void init() {
 		loadProperties();
+		System.out.println("browser= "+browser+" initialized....");
 		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--no-sandbox");
+			//options.addArguments("--no-sandbox");
 			//options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--headless");			
+			//options.addArguments("--headless");			
 			driver = new ChromeDriver(options);
 			break;
 

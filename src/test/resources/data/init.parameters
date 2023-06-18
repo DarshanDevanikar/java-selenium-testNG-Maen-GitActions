@@ -1,1 +1,6 @@
+
+# Prod
+prod.url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 browser=chrome
+prod.user=Admin
+prod.pass=admin123
