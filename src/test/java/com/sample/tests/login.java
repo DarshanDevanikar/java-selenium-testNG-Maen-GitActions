@@ -10,7 +10,7 @@ public class login extends Base {
 	LoginPage loginpage;
 
 	@Test
-	public void TC0001_login() {
+	public void TC00001_login() {
 		loginpage = new LoginPage(driver, properties);
 		Assert.assertTrue(loginpage.login());
 	}
